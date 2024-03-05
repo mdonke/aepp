@@ -1218,7 +1218,7 @@ class Schema:
                 obj["definitions"]["property"]["properties"][tenantId] = obj["definitions"]["property"]["properties"][oldTenant]
                 del obj["definitions"]["property"]["properties"][oldTenant]
             elif 'customFields' in obj["definitions"].keys():
-                if tenantId in obj["definitions"]["customFields"]["properties"].keys():
+                if oldTenant in obj["definitions"]["customFields"]["properties"].keys():
                     obj["definitions"]["customFields"]["properties"][tenantId] = obj["definitions"]["customFields"]["properties"][oldTenant]
                     del obj["definitions"]["customFields"]["properties"][oldTenant]
                 else:
